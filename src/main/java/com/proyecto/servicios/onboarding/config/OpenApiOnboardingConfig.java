@@ -1,9 +1,7 @@
 package com.proyecto.servicios.onboarding.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
-import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
 import io.swagger.v3.oas.models.Components;
@@ -20,11 +18,9 @@ public class OpenApiOnboardingConfig {
         final String schemeName = "bearerAuth";
         return new OpenAPI()
                 .info(new Info()
-                        .title("Onboarding Clientes Personas Fisicas API")
+                        .title("PWA_Prueba")
                         .description("API REST para registro, consulta y gestion de clientes bancarios")
-                        .version("1.0.0")
-                        .contact(new Contact().name("Cristian Oropeza").email("oropezacristian40@gmail.com"))
-                        .license(new License().name("MIT")))
+                        .version("1.0.0"))
                 .addSecurityItem(new SecurityRequirement().addList(schemeName))
                 .components(new Components().addSecuritySchemes(schemeName,
                         new SecurityScheme()
